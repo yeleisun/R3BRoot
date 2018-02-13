@@ -84,4 +84,10 @@
 #pragma link C++ class R3BFi4CalItem+;
 #pragma link C++ class R3BFi4HitItem+;
 #pragma link C++ class R3BFi4Point+;
+#pragma link C++ class R3BTPCSetup+;
+#pragma link C++ class R3BTPCDatai+;
+#pragma link C++ class R3BTPCPoint+;
+#pragma link C++ class R3BTPCHitSim+;
+#pragma link C++ class R3BTPCRawEvtSim+;
+#pragma link C++ class R3BTPCDigi+;
 #endif

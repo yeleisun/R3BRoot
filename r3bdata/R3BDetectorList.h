@@ -40,6 +40,7 @@ enum DetectorId
     kSOFMWPC2,
     kSOFTofWall,
 #endif
+    kTPC,
     kLAST
 };
 
@@ -76,6 +77,7 @@ enum fDetectorType
     ,kSOFMWPC2Point
     ,kSOFTofWallPoint
 #endif
+    ,kTPCPoint
 };
 
 enum SensorSide

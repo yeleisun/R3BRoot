@@ -1,0 +1,38 @@
+include ./Makefile.arch
+
+#------------------------------------------------------------------------------
+SHARELIB      =  libR3BTPCSetup.so
+
+all:            $(SHARELIB)
+#------------------------------------------------------------------------------
+############### Detector ##############
+
+## TPC ##
+libR3BTPCSetup.so:    R3BTPCSetup.o	R3BTPCSetupDict.o
+		$(LD) $(SOFLAGS) $^ $(OutPutOpt) $@
+
+R3BTPCSetupDict.cxx:	R3BTPCSetup.h
+			rootcint -f $@ -c $^
+
+
+# dependances
+R3BTPCSetup.o:		R3BTPCSetup.cxx	R3BTPCSetup.h
+R3BTPCSetupDict.o:	R3BTPCSetupDict.cxx
+
+#######################################
+
+############# Clean and More ##########
+clean:
+	@rm -f core *~ *.o *Dict*
+
+distclean:
+	  make clean; rm -f *.so
+
+.SUFFIXES: .$(SrcSuf)
+
+###
+
+.$(SrcSuf).$(ObjSuf):
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $<
+
+
