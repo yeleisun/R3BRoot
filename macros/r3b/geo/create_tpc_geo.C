@@ -103,17 +103,17 @@ void create_tpc_geo(const char* geoTag="v1")
   TGeoMedium* pair = gGeoMan->GetMedium("air");
   if ( ! pair ) Fatal("Main", "Medium Air not found");
   
-  FairGeoMedium* mTof      = geoMedia->getMedium("LH2");
-  if ( ! mTof ) Fatal("Main", "FairMedium LH2 not found");
-  geoBuild->createMedium(mTof);
-  TGeoMedium* pMed34 = gGeoMan->GetMedium("LH2");
-  if ( ! pMed34 ) Fatal("Main", "Medium LH2 not found");
+  FairGeoMedium* mLH2      = geoMedia->getMedium("LH2");
+  if ( ! mLH2 ) Fatal("Main", "FairMedium LH2 not found");
+  geoBuild->createMedium(mLH2);
+  TGeoMedium* pLH2 = gGeoMan->GetMedium("LH2");
+  if ( ! pLH2 ) Fatal("Main", "Medium LH2 not found");
 
-  FairGeoMedium* mTof      = geoMedia->getMedium("carbon");
-  if ( ! mTof ) Fatal("Main", "FairMedium carbon not found");
-  geoBuild->createMedium(mTof);
-  TGeoMedium* pMed34 = gGeoMan->GetMedium("carbon");
-  if ( ! pMed34 ) Fatal("Main", "Medium carbon not found");
+  FairGeoMedium* mcarbon      = geoMedia->getMedium("carbon");
+  if ( ! mcarbon ) Fatal("Main", "FairMedium carbon not found");
+  geoBuild->createMedium(mcarbon);
+  TGeoMedium* pcarbon = gGeoMan->GetMedium("carbon");
+  if ( ! pcarbon ) Fatal("Main", "Medium carbon not found");
 
   FairGeoMedium* mAl      = geoMedia->getMedium("mylar");
   if ( ! mAl ) Fatal("Main", "FairMedium mylar not found");
@@ -238,6 +238,12 @@ void ConstructTPC(TGeoVolume* pWorld)
   TGeoShape* solidTarget=0;  TGeoVolume* logicTarget=0;
   TGeoShape* solidChamber=0; TGeoVolume* logicChamber=0;
   TGeoShape* solidTPC=0;     TGeoVolume* logicTPC=0;
+  TGeoShape* solidKapton = 0;TGeoVolume* logicKapton=0;
+  TGeoShape* solidInnerRohacell = 0; TGeoVolume* logicInnerRohacell=0; 
+  TGeoShape* solidOuterRohacell = 0; TGeoVolume* logicOuterRohacell=0;
+  TGeoShape* solidWindow0 = 0; TGeoVolume* logicWindow0=0;
+  TGeoShape* solidWindow2 = 0; TGeoVolume* logicWindow1=0;
+  TGeoShape* solidWindow1 = 0; TGeoVolume* logicWindow2=0;
   TGeoShape* solidGap=0;     TGeoVolume* logicGap=0;
 
   //___________Target
