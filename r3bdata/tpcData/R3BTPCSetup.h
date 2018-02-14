@@ -49,6 +49,8 @@ inline double GetGladOffsetX(){return GladOffsetX;}
 inline double GetGladOffsetY(){return GladOffsetY;}
 inline double GetGladOffsetZ(){return GladOffsetZ;}
 
+void Print();
+
 ClassDef(R3BTPCSetup,1)
 };
 

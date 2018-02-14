@@ -157,6 +157,7 @@ void create_tpc_geo(const char* geoTag="v1")
   // --------------------------------------------------------------------------
 
   R3BTPCSetup* setup = new R3BTPCSetup(1);
+  setup->Print();
 
 
   TargetLength           = setup->TargetLength/2.;//cm

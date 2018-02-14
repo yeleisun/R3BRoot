@@ -268,4 +268,35 @@ void R3BTPCSetup::ReadConfigurationFile(string Config,int verbose)
    ConfigFile.close();
    return   ;
 }
+void R3BTPCSetup::Print()
+{
+
+	 cout << "TargetRadius = " << TargetRadius<<" cm"<<endl;
+	 cout << "TargetLength = " << TargetLength<<" cm"<<endl;
+	 cout << "ChamberInnerRadius = " << ChamberInnerRadius<<" cm"<<endl;
+	 cout << "ChamberThickness = " << ChamberThickness<<" cm"<<endl;
+	 cout << "ChamberLength = " << ChamberLength<<" cm"<<endl;
+	 cout << "InnerRohacellThickness = " << InnerRohacellThickness<<" cm"<<endl;
+	 cout << "KaptonThickness = " << KaptonThickness<<" cm"<<endl;
+	 cout << "OuterRohacellThickness = " << OuterRohacellThickness<<" cm"<<endl;
+	 cout << "TPCRadiusExt = " << TPCRadiusExt<<" cm"<<endl;
+	 cout << "TPCLx = " << TPCLx<<" cm"<<endl;
+	 cout << "TPCLy = " << TPCLy<<" cm"<<endl;
+	 cout << "TPCLz = " << TPCLz<<" cm"<<endl;
+	 cout << "WindowThickness = " << WindowThickness<<" cm"<<endl;
+	 cout << "TargetAngle = " << TargetAngle<<" deg"<<endl;
+	 cout << "TargetOffsetX = " << TargetOffsetX<<" cm"<<endl;
+	 cout << "TargetOffsetY = " << TargetOffsetY<<" cm"<<endl;
+	 cout << "TargetOffsetZ = " << TargetOffsetZ<<" cm"<<endl;
+	 cout << "GladAngle = " << GladAngle<<" deg"<<endl;
+	 cout << "GladOffsetX = " << GladOffsetX<<" cm"<<endl;
+	 cout << "GladOffsetY = " << GladOffsetY<<" cm"<<endl;
+	 cout << "GladOffsetZ = " << GladOffsetZ<<" cm"<<endl;
+	 cout << "FieldAngle = " << FieldAngle<<" deg"<<endl;
+	 cout << "FieldOffsetX = " << FieldOffsetX<<" cm"<<endl;
+	 cout << "FieldOffsetY = " << FieldOffsetY<<" cm"<<endl;
+	 cout << "FieldOffsetZ = " << FieldOffsetZ<<" cm"<<endl;
+	 cout << "OutputFileName = " << OutputFileName<<endl;
+
+}
 
