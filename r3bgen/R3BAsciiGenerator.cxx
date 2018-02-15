@@ -159,8 +159,8 @@ Bool_t R3BAsciiGenerator::ReadEvent(FairPrimaryGenerator* primGen) {
 	  pdgType = part->PdgCode();
       }
 
-      //else pdgType = iPid;  // "normal" particle
-       else pdgType = iA;  // "normal" particle
+       else pdgType = iPid;  // "normal" particle
+       //else pdgType = iA;  // "normal" particle
 
       // Give track to PrimaryGenerator
       //cout << "PDG : " << pdgType << endl;
