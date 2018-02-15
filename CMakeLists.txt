@@ -7,9 +7,9 @@
 
 # Check if cmake has the required version
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.2 FATAL_ERROR)
-SET(CMAKE_C_COMPILER "/opt/rhel-6.x86_64/gnu/gcc/4.8.4/bin/gcc")
-SET(CMAKE_CXX_COMPILER "/opt/rhel-6.x86_64/gnu/gcc/4.8.4/bin/g++")
-include_directories("/opt/rhel-6.x86_64/gnu/gcc/4.8.4/include/c++/4.8.4/")
+#SET(CMAKE_C_COMPILER "/opt/rhel-6.x86_64/gnu/gcc/4.8.4/bin/gcc")
+#SET(CMAKE_CXX_COMPILER "/opt/rhel-6.x86_64/gnu/gcc/4.8.4/bin/g++")
+#include_directories("/opt/rhel-6.x86_64/gnu/gcc/4.8.4/include/c++/4.8.4/")
 
 
 ### CMP0025   Compiler id for Apple Clang is now AppleClang.
