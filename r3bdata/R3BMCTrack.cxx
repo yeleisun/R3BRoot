@@ -210,6 +210,8 @@ Int_t R3BMCTrack::GetNPoints(DetectorId detId) const
     else if (detId == kSOFTofWall)
         return ((fNPoints & 0xC0000000000000) >> 54);
 #endif
+    else if (detId == kTPC)
+        return ((fNPoints & 0x300000000000000) >> 56);
     else
     {
         cout << "-E- R3BMCTrack::GetNPoints: Unknown detector ID " << detId << endl;
@@ -341,6 +343,10 @@ void R3BMCTrack::SetNPoints(Int_t iDet, Int_t nP)
         fNPoints = (fNPoints & (~0xC0000000000000)) | (nPoints << 54);
     }
 #endif
+    else if (iDet == kTPC)
+    {
+        fNPoints = (fNPoints & (~0x300000000000000)) | (nPoints << 56);
+    }
     else
     {
         cout << "-E- R3BMCTrack::SetNPoints: Unknown detector ID " << iDet << endl;
