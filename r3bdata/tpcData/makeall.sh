@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export TPCLIBDIR="/home/gpfs/manip/mnt0607/structurenucleaire/ysun/gsi/2018/R3BRoot/r3bdata/tpcData"
+#TPCLIBDIR=$PWD
+#export TPCLIBDIR
 
 rm *.o
 rm *.so
