@@ -1,5 +1,5 @@
 #ifndef R3BTPCDIGITIZER_H
-#define R3BTPCDDIGITISER_H 1
+#define R3BTPCDIGITISER_H 1
 
 
 #include "FairTask.h"

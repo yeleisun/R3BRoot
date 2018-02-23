@@ -124,7 +124,7 @@ Bool_t R3BAsciiGenerator::ReadEvent(FairPrimaryGenerator* primGen) {
 
       *fInputFile >> iPid  >> iZ >> iA >> px >> py >> pz >> vx >> vy >> vz >> iMass;
      
-      /*    cout << "-I- R3BAsciiGenerator: iPid: " << iPid <<
+          cout << "-I- R3BAsciiGenerator: iPid: " << iPid <<
 	  ",   A = " << iA << " Z = " << iZ <<
 	  " px = "  << px <<
 	  " py = "  << py <<
@@ -132,7 +132,7 @@ Bool_t R3BAsciiGenerator::ReadEvent(FairPrimaryGenerator* primGen) {
 	  " vx = "  << vx <<
 	  " vy = "  << vy <<
 	  " vz = " << vz << endl;
-      */
+      
 
       Int_t pdgType=0;
 
