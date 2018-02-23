@@ -75,8 +75,10 @@ R3BTPC::R3BTPC(const char* name, Bool_t active)
 // -------------------------------------------------------------------------
 
 R3BTPC::R3BTPC(const TString& geoFile, const TGeoTranslation& trans, const TGeoRotation& rot)
-    : R3BTPC(geoFile, { trans, rot })
+    : R3BDetector("R3BTPC", kTPC, geoFile, trans, rot)
+//    : R3BTPC(geoFile, { trans, rot })
 {
+   std::cout<<"R3BTPC constructor..."<<std::endl;
     GetTPCParameters();
     fTPCHitSimCollection = new TClonesArray("R3BTPCHitSim");
 }
@@ -113,7 +115,7 @@ void R3BTPC::Initialize()
   LOG(INFO) << "R3BTPC: initialisation" << FairLogger::endl;
   LOG(DEBUG) << "-I- R3BTPC: Vol (McId) def" << FairLogger::endl;
 
-  LOG(INFO) << "R3BTPC: Sci. Vol. (McId) " << gMC->VolId("TPCLog") << FairLogger::endl;
+  LOG(INFO) << "R3BTPC: TPC Vol. (McId) " << gMC->VolId("TPC_box") << FairLogger::endl;
 
 }
 
@@ -183,6 +185,7 @@ Bool_t R3BTPC::ProcessHits(FairVolume* vol)
 
 
     ahit.fVolName = vol->GetName();
+    //cout<<"fVolName:"<<ahit.fVolName<<endl;
     ahit.fModuleID = vol->getModId();//module id, 
     //ahit.fModuleName = vol->getRealName();
     ahit.fDetectorID = Int_t(vol->getCopyNo());//volume copy number

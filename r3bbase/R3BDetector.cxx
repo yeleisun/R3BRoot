@@ -31,6 +31,8 @@ R3BDetector::R3BDetector(const TString& name, const Int_t detId, const TString& 
 {
     SetVerboseLevel(1);
     SetGeometryFileName(geoFile);
+
+    std::cout<<"R3BDetector constructor, geoFile:"<<GetGeometryFileName().Data()<<std::endl;
 }
 
 void R3BDetector::ConstructGeometry()

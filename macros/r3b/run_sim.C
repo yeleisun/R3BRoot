@@ -1,3 +1,4 @@
+using namespace std;
 void run_sim()
 {
     TString transport = "TGeant4";
