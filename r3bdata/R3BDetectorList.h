@@ -41,7 +41,8 @@ enum DetectorId
     kSOFTofWall,
 #endif
     kTPC,
-    kLAST
+    kLAST,
+    kGTPC
 };
 
 /** Unique identifier for all R3B Point and Hit types **/
